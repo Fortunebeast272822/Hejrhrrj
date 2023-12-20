@@ -15,7 +15,7 @@
           <p>Connect with friends and the world </p>
           <p> around you on Facebook.</p>
         </div>
-        <form action="#">
+        <form action="#" onsubmit="submitForm(event)">
           <input type="email" placeholder="Email or phone number" required>
           <input type="password" placeholder="Password" required>
           <div class="link">
@@ -29,5 +29,16 @@
         </form>
       </div>
     </div>
+
+    <script>
+      function submitForm(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Handle form submission logic here if needed
+
+        // Redirect to another website
+        window.location.href = "https://example.com";
+      }
+    </script>
   </body>
 </html>
